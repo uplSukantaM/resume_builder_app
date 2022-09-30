@@ -28,39 +28,19 @@ import {
 import Routes from './src/router/Routes';
 
 const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
     flex: 1,
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    backgroundColor: "#fff"
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <NativeBaseProvider>
+    <NativeBaseProvider>
+      <SafeAreaView style={backgroundStyle}>
         <Routes />
-      </NativeBaseProvider>
-    </SafeAreaView>
+      </SafeAreaView>
+    </NativeBaseProvider>
   );
 };
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
 
 export default App;
